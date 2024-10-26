@@ -1,0 +1,8 @@
+{
+  "name": "Card 1",
+  "description": "Description of card1.",
+  "icon": "res://assets/cards/card1.png",
+  "skill_id": 101,
+  "skill_tree": "",
+  "is_upgrade": false
+}

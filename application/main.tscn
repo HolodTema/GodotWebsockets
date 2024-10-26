@@ -1,18 +1,214 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://application/main.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/font_als.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+
+[sub_resource type="Gradient" id=4]
+
+[sub_resource type="GradientTexture2D" id=2]
+gradient = SubResource( 4 )
+width = 1920
+height = 1080
+
+[sub_resource type="DynamicFont" id=5]
+size = 100
+font_data = ExtResource( 2 )
+
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 0, 0.122905, 1 )
+colors = PoolColorArray( 0, 0, 0, 1, 0.750215, 0.832031, 0.1775, 1, 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture2D" id=6]
+gradient = SubResource( 3 )
+width = 550
+height = 900
+
+[sub_resource type="DynamicFont" id=7]
+size = 12
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 100
+font_data = ExtResource( 2 )
 
 [node name="main" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
 
-[node name="messages" type="RichTextLabel" parent="."]
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 32.0
-margin_top = -376.0
-margin_right = -32.0
-text = "Messages
+[node name="background" type="TextureRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_pivot_offset = Vector2( 1254, 304 )
+texture = SubResource( 2 )
+
+[node name="text_health" type="RichTextLabel" parent="."]
+margin_left = 63.0
+margin_top = 55.0
+margin_right = 263.0
+margin_bottom = 135.0
+text = "Health: 0"
+
+[node name="progress_exp" type="ProgressBar" parent="."]
+margin_left = 343.0
+margin_top = 952.0
+margin_right = 1643.0
+margin_bottom = 1012.0
+
+[node name="text_game_over" type="RichTextLabel" parent="."]
+margin_left = 665.0
+margin_top = 403.0
+margin_right = 1365.0
+margin_bottom = 583.0
+custom_fonts/normal_font = SubResource( 5 )
+text = "Game over!"
+
+[node name="button_play_again" type="Button" parent="."]
+margin_left = 809.0
+margin_top = 564.0
+margin_right = 1209.0
+margin_bottom = 714.0
+text = "Play again"
+
+[node name="texture_card1" type="TextureRect" parent="."]
+margin_left = 76.0
+margin_top = 42.0
+margin_right = 626.0
+margin_bottom = 942.0
+texture = SubResource( 6 )
+
+[node name="text_card_name1" type="RichTextLabel" parent="texture_card1"]
+margin_left = 38.0
+margin_top = 18.0
+margin_right = 538.0
+margin_bottom = 78.0
+text = "Card name"
+
+[node name="text_card_description1" type="RichTextLabel" parent="texture_card1"]
+margin_left = 40.0
+margin_top = 336.0
+margin_right = 540.0
+margin_bottom = 881.0
+custom_fonts/mono_font = SubResource( 7 )
+text = "Card description
 "
+
+[node name="texture_card_icon1" type="TextureRect" parent="texture_card1"]
+margin_left = 146.0
+margin_top = 74.0
+margin_right = 402.0
+margin_bottom = 330.0
+texture = ExtResource( 3 )
+
+[node name="button_card1" type="Button" parent="texture_card1"]
+margin_left = 55.0
+margin_top = 917.0
+margin_right = 505.0
+margin_bottom = 1017.0
+text = "применить"
+
+[node name="texture_card2" type="TextureRect" parent="."]
+margin_left = 700.0
+margin_top = 42.0
+margin_right = 1250.0
+margin_bottom = 942.0
+texture = SubResource( 6 )
+
+[node name="text_card_name2" type="RichTextLabel" parent="texture_card2"]
+margin_left = 38.0
+margin_top = 18.0
+margin_right = 538.0
+margin_bottom = 78.0
+text = "Card name"
+
+[node name="text_card_description2" type="RichTextLabel" parent="texture_card2"]
+margin_left = 40.0
+margin_top = 336.0
+margin_right = 540.0
+margin_bottom = 881.0
+custom_fonts/mono_font = SubResource( 7 )
+text = "Card description
+"
+
+[node name="texture_card_icon2" type="TextureRect" parent="texture_card2"]
+margin_left = 146.0
+margin_top = 74.0
+margin_right = 402.0
+margin_bottom = 330.0
+texture = ExtResource( 3 )
+
+[node name="button_card2" type="Button" parent="texture_card2"]
+margin_left = 55.0
+margin_top = 917.0
+margin_right = 505.0
+margin_bottom = 1017.0
+text = "применить"
+
+[node name="texture_card3" type="TextureRect" parent="."]
+margin_left = 1315.0
+margin_top = 44.0
+margin_right = 1865.0
+margin_bottom = 944.0
+texture = SubResource( 6 )
+
+[node name="text_card_name3" type="RichTextLabel" parent="texture_card3"]
+margin_left = 38.0
+margin_top = 18.0
+margin_right = 538.0
+margin_bottom = 78.0
+text = "Card name"
+
+[node name="text_card_description3" type="RichTextLabel" parent="texture_card3"]
+margin_left = 40.0
+margin_top = 336.0
+margin_right = 540.0
+margin_bottom = 881.0
+custom_fonts/mono_font = SubResource( 7 )
+text = "Card description
+"
+
+[node name="texture_card_icon3" type="TextureRect" parent="texture_card3"]
+margin_left = 146.0
+margin_top = 74.0
+margin_right = 402.0
+margin_bottom = 330.0
+texture = ExtResource( 3 )
+
+[node name="button_card3" type="Button" parent="texture_card3"]
+margin_left = 55.0
+margin_top = 917.0
+margin_right = 505.0
+margin_bottom = 1017.0
+text = "применить"
+
+[node name="button_start" type="Button" parent="."]
+margin_left = 823.0
+margin_top = 496.0
+margin_right = 1123.0
+margin_bottom = 576.0
+text = "начать игру"
+
+[node name="text_win" type="RichTextLabel" parent="."]
+margin_left = 751.0
+margin_top = 408.0
+margin_right = 1251.0
+margin_bottom = 558.0
+custom_fonts/normal_font = SubResource( 8 )
+text = "Победа!"
+
+[node name="button_win_play_again" type="Button" parent="."]
+margin_left = 798.0
+margin_top = 634.0
+margin_right = 1148.0
+margin_bottom = 734.0
+text = "Играть снова"
+
+[connection signal="pressed" from="button_play_again" to="." method="_on_button_play_again_pressed"]
+[connection signal="pressed" from="texture_card1/button_card1" to="." method="_on_button_card1_pressed"]
+[connection signal="pressed" from="texture_card2/button_card2" to="." method="_on_button_card2_pressed"]
+[connection signal="pressed" from="texture_card2/button_card2" to="." method="_on_button_card1_pressed"]
+[connection signal="pressed" from="texture_card3/button_card3" to="." method="_on_button_card3_pressed"]
+[connection signal="pressed" from="texture_card3/button_card3" to="." method="_on_button_card1_pressed"]
+[connection signal="pressed" from="button_start" to="." method="_on_button_start_pressed"]
+[connection signal="pressed" from="button_win_play_again" to="." method="_on_button_win_play_again_pressed"]

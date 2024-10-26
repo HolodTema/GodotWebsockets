@@ -102,4 +102,4 @@ quality/driver/driver_name="GLES2"
 threads/thread_model=2
 vram_compression/import_etc=true
 environment/default_clear_color=Color( 0.0235294, 0.0470588, 0.0901961, 1 )
-environment/default_environment="res://default_env.tres"
+environment/default_environment="res://assets/cards/default_env.tres"

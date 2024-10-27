@@ -309,9 +309,9 @@ func load_card(id, cardType):
 		
 		var jsonData = JSON.parse(jsonStr)
 		# q_data = jsonData
-		if jsonData != null:
+		if jsonData != null and jsonData.error==OK:
 			print(jsonData)
-			return jsonData
+			return jsonData.result
 		else:
 			print("Failed to parse JSON data.")
 			return null

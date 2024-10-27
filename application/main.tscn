@@ -206,8 +206,8 @@ text = "Играть снова"
 
 [connection signal="pressed" from="button_play_again" to="." method="_on_button_play_again_pressed"]
 [connection signal="pressed" from="texture_card1/button_card1" to="." method="_on_button_card1_pressed"]
-[connection signal="pressed" from="texture_card2/button_card2" to="." method="_on_button_card2_pressed"]
 [connection signal="pressed" from="texture_card2/button_card2" to="." method="_on_button_card1_pressed"]
+[connection signal="pressed" from="texture_card2/button_card2" to="." method="_on_button_card2_pressed"]
 [connection signal="pressed" from="texture_card3/button_card3" to="." method="_on_button_card3_pressed"]
 [connection signal="pressed" from="texture_card3/button_card3" to="." method="_on_button_card1_pressed"]
 [connection signal="pressed" from="button_start" to="." method="_on_button_start_pressed"]
